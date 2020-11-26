@@ -11,7 +11,7 @@ from tech_news.analyzer.search_engine import (
 import pytest
 
 DB_HOST = config("DB_HOST", default="localhost")
-DB_PORT = config("DB_PORT", default="27017")
+DB_PORT = config("DB_PORT", default=27017)
 
 client = MongoClient(host=DB_HOST, port=int(DB_PORT))
 db = client.tech_news

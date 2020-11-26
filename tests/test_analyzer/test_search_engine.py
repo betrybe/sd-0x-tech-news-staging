@@ -10,8 +10,8 @@ from tech_news.analyzer.search_engine import (
 )
 import pytest
 
-client = MongoClient()
-DB_HOST = config("DB_HOST", default="localhost")
+
+DB_HOST = config("DB_HOST", default="mongodb")
 DB_PORT = config("DB_PORT", default=27017)
 
 client = MongoClient(host=DB_HOST, port=int(DB_PORT))

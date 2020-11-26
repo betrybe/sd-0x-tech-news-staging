@@ -6,6 +6,7 @@ from tech_news.collector.scrapper import fetch_content
 from pymongo import MongoClient
 from decouple import config
 
+
 DB_HOST = config("DB_HOST", default="mongodb")
 DB_PORT = config("DB_PORT", default=27017)
 

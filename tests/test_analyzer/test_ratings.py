@@ -4,8 +4,7 @@ from tech_news.analyzer.ratings import (top_5_news, top_5_categories)
 from pymongo import MongoClient
 from decouple import config
 
-client = MongoClient(host="127.0.0.1", port=27017)
-
+client = MongoClient(host="mongodb", port=27017, connect=False)
 db = client.tech_news
 
 NEW_NOTICE_1 = {'url': 'https://www.tecmundo.com.br/noticia_1.htm',

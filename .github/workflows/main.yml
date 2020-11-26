@@ -24,7 +24,7 @@ jobs:
         with:
           repository_main_branch: master
         env:
-          DB_HOST: 'mongodb'
+          DB_HOST: 'localhost'
           DB_PORT: 27017
         id: pytest_evaluator
       - name: Store evaluation step

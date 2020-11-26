@@ -167,7 +167,7 @@ https://www.tecmundo.com.br/mobilidade-urbana-smart-cities/155348-alemanha-traba
 ### Raspagem de notícias
 
 As notícias a serem raspadas estarão disponíveis na aba de últimas notícias do _TecMundo_: https://www.tecmundo.com.br/novidades.
-
+rrs
 Essas notícias devem ser salvas no banco de dados, utilizando os mesmos atributos já descritos na importação/exportação citada anteriormente.
 
 ### MongoDB

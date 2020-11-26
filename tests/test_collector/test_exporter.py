@@ -5,7 +5,6 @@ from tech_news.collector.exporter import csv_exporter
 from pymongo import MongoClient
 from decouple import config
 
-
 client = MongoClient(host="mongodb", port=27017)
 
 db = client.tech_news

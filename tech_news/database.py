@@ -3,8 +3,12 @@
 from pymongo import MongoClient
 from decouple import config
 
+<<<<<<< HEAD
 
 DB_HOST = config("DB_HOST", default="localhost")
+=======
+DB_HOST = config("DB_HOST", default="mongodb")
+>>>>>>> 0af42d00683517054f8beed60a8ba7a2cd260c65
 DB_PORT = config("DB_PORT", default=27017)
 
 client = MongoClient(host=DB_HOST, port=int(DB_PORT))

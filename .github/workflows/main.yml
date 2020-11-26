@@ -20,11 +20,11 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           pr_number: ${{ github.event.number }}
       - name: Pytest Evaluator Step
-        uses: betrybe/pytest-evaluator-action@v1.2
+        uses: betrybe/pytest-evaluator-action@fixes
         with:
           repository_main_branch: master
         env:
-          DB_HOST: '127.0.0.1'
+          DB_HOST: 'localhost'
           DB_PORT: 27017
         id: pytest_evaluator
       - name: Store evaluation step

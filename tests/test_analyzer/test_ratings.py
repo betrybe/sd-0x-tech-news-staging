@@ -4,7 +4,7 @@ from tech_news.analyzer.ratings import (top_5_news, top_5_categories)
 from pymongo import MongoClient
 from decouple import config
 
-client = MongoClient(host="mongodb", port=27017)
+client = MongoClient(host="127.0.0.1", port=27017)
 
 db = client.tech_news
 

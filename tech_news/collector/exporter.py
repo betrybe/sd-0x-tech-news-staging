@@ -1,3 +1,5 @@
+# flake8: noqa
+
 from tech_news.collector.export_service import (
     exported_directory,
     headers,

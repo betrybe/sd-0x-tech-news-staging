@@ -1,3 +1,5 @@
+# flake8: noqa
+
 from tech_news.database import aggregate_news
 
 def top_5_news():

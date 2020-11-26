@@ -1,3 +1,5 @@
+# flake8: noqa
+
 from tech_news.database import search_news
 
 

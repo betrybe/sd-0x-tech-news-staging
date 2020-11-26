@@ -1,3 +1,5 @@
+# flake8: noqa
+
 import datetime
 
 from tech_news.analyzer.search_service import get_news_list

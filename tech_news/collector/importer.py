@@ -1,3 +1,5 @@
+# flake8: noqa
+
 from tech_news.collector.importer_service import (
     check_extension,
     check_field,

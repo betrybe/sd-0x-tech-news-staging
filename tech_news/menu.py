@@ -1,3 +1,5 @@
+# flake8: noqa
+
 from tech_news.analyzer.ratings import (top_5_categories, top_5_news)
 from tech_news.analyzer.search_engine import (
     search_by_category, search_by_date, search_by_source, search_by_title)

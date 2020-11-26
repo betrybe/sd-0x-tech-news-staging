@@ -1,3 +1,5 @@
+# flake8: noqa
+
 import requests
 import parsel
 from requests.exceptions import HTTPError

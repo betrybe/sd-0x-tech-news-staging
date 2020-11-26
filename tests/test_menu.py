@@ -6,7 +6,7 @@ from tech_news.collector.scrapper import fetch_content
 from pymongo import MongoClient
 from decouple import config
 
-client = MongoClient(host="mongodb", port=27017, connect=False)
+"mongodb", port=27017, connect=False)
 
 db = client.tech_news
 

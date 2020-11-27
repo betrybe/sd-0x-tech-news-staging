@@ -6,11 +6,10 @@ jobs:
     name: Evaluator Job
     runs-on: ubuntu-18.04
     services:
-      mongodb:
+      mongodb-service:
         image: mongo
         ports:
           - "27017:27017"
-        options: -v ${{ github.workspace }}:/github/workspace
     steps:
       - uses: actions/checkout@v2
       - name: Flake8 Linter Step
@@ -24,7 +23,7 @@ jobs:
         with:
           repository_main_branch: master
         env:
-          DB_HOST: 'mongodb'
+          DB_HOST: 'mongodb-service'
           DB_PORT: 27017
         id: pytest_evaluator
       - name: Store evaluation step

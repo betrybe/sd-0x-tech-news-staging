@@ -16,13 +16,13 @@ def check_duplicates(news):
     """Seu código deve vir aqui"""
 
 def create_news(data):
-        db.news.insert_many(data)
+    db.news.insert_many(data)
 
 def find_news():
-        return list(db.news.find({}, {'_id': False}))
+    return list(db.news.find({}, {'_id': False}))
 
 def search_news(query):
-        return list(db.news.find(query))
+    return list(db.news.find(query))
 
 def aggregate_news(query):
-        return list(db.news.aggregate(query))
+    return list(db.news.aggregate(query))

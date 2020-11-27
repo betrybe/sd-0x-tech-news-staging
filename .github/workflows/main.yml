@@ -6,10 +6,11 @@ jobs:
     name: Evaluator Job
     runs-on: ubuntu-18.04
     services:
-      mongodb-service:
+      mongodb:
         image: mongo
         ports:
           - "27017:27017"
+        options: -v ${{ github.workspace }}:/github/workspace
     steps:
       - uses: actions/checkout@v2
       - name: Flake8 Linter Step

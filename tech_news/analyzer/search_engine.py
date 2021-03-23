@@ -1,14 +1,31 @@
+# flake8: noqa
+
+import datetime
+
+from tech_news.analyzer.search_service import get_news_list
+
 def search_by_title(title):
-    """Seu código deve vir aqui"""
+    regex = r"\b" + title + r"\b"
+    query = {"title": {"$regex": regex, "$options": 'i'}}
+    return get_news_list(query)
 
 
 def search_by_date(date):
-    """Seu código deve vir aqui"""
+    try:
+        datetime.datetime.strptime(date, '%Y-%m-%d')
+    except ValueError:
+        raise ValueError("Data inválida")
+    else:
+        query = {"timestamp": {"$regex": date, "$options": 'i'}}
+        return get_news_list(query)
 
 
 def search_by_source(source):
-    """Seu código deve vir aqui"""
+    regex = r"\b" + source + r"\b"
+    query = {"sources": {"$regex": regex, "$options": 'i'}}
+    return get_news_list(query)
 
 
 def search_by_category(category):
-    """Seu código deve vir aqui"""
+    query = {"categories": {"$regex": category, "$options": "i"}}
+    return get_news_list(query)
